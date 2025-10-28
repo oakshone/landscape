@@ -1,0 +1,133 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {border-bottom: 1px solid $greyColor;}
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: $primaryColor;
+    }
+} // end header
+
+
+/* --------------------------- IMAGE STUFF GOES HERE --------------------------- */
+div.parent {
+    display: grid;
+    section {
+        position: relative;
+        h2{}
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        img:last-child {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        padding: 1rem $gutter.5rem $gutter;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+        font-weight: $lightWeight
+    }
+    p {
+        padding: .5rem $gutter;
+        color: #333;
+        line-height: $leading;
+    }
+}// end main
+
+
+
+
+
+.swiper, .swiper img {
+  width: 100%;
+  height: auto;
+}
+
+
+// clip path
+
+div.clip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    section{
+        padding: 7px;
+
+        img{
+        width: 100%;
+        height: auto;
+        clip-path: circle(50% at 50% 50%);
+        transition: transform 1s;
+        &:hover {transform: rotate(15deg);}
+        }
+    
+    } // end section
+} // end parent
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: #333;
+} // end footer wrapper
+
+footer {
+    font-size: 1rem;
+    color: $greyColor;
+    text-align: center;
+    line-height: $leading;
+}// end footer

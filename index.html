@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Leafy Landscape</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+ 
+<!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+<div id="headerWrapper">
+	<header>
+        <img src="images/logo1x.png" alt="logo" width="100" height="100" srcset="images/logo2x.png 2x, images/logo3x.png 3x">
+        <button id="theButton"></button>
+	</header>
+</div><!-- end header wrapper -->
+
+    
+    
+<div id="navWrapper">
+    <nav>
+        <ul id="theNav">
+            <li><a href="#">Clients</a></li>
+            <li class="parent"><a href="#">Services</a>
+            <ul>
+                <li><a href="#">Weeding</a></li>
+                <li><a href="#">Trimming</a></li>
+                <li><a href="#">Tiling</a></li>
+            </ul>
+            </li>
+            <li class="parent"><a href="#">Our Crew</a>
+            <ul>
+                <li><a href="#">Peter</a></li>
+                <li><a href="#">Paul</a></li>
+                <li><a href="#">Mary</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div> <!-- end nav wrapper -->
+
+
+    <main>
+
+ <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+<div class="swiper-slide">
+    <picture>
+    <source srcset="images/rock-small.webp" media="(max-width: 400px)">
+    <source srcset="images/rock-medium.webp" media="(max-width: 800px)">
+    <img src="images/rock-large.webp" alt="sliderLarge" width="16" height="9">
+    </picture>
+  </div><!--end of one slide -->
+
+  <div class="swiper-slide">
+    <picture>
+    <source srcset="images/backyard-small.jpg" media="(max-width: 400px)">
+    <source srcset="images/backyard-medium.jpg" media="(max-width: 800px)">
+    <img src="images/backyard-large.jpg" alt="sliderLarge" width="16" height="9">
+    </picture>
+  </div><!--end of one slide -->
+
+
+
+
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+<h1>Services</h1>
+
+<div id="parent">
+    <section>
+        <h2>Weeding</h2>
+        <img src="images/cut-service.jpg" width="295" height="171" alt="cut-service">
+        <img src="images/grass.png" width="295" height="43" alt="mask">
+    </section>
+
+    <section>
+        <h2>Tile</h2>
+        <img src="images/tile.jpg" width="208" height="171" alt="tile-service">
+        <img src="images/grass.png" width="208" height="43" alt="mask">
+    </section>
+
+    <section>
+        <h2>Mulch</h2>
+        <img src="images/cut-service.jpg" width="400" height="250" alt="cut-service">
+        <img src="images/mulch.png" width="400" height="256" alt="mask">
+    </section>
+
+    <section>
+        <h2>Some Title</h2>
+        <img src="images/cut-service.jpg" width="400" height="250" alt="cut-service">
+        <img src="images/grass.png" width="400" height="250" alt="mask">
+    </section>
+</div>
+
+
+
+
+<h3>Customers Say</h3>
+
+<div id="clip">
+    <section>
+        <img src="images/profile-1.jpg" width="200" height="200" alt="customer1">
+        <p>I hired GreenView Landscaping to completely redesign my backyard, and I couldn't be happier with the results. The team was professional, punctual, and full of creative ideas. They transformed a patchy, uneven lawn into a beautiful outdoor living space with a new patio, garden beds, and lighting. Communication was great throughout the process, and they stayed within budget. I've already recommended them to two neighbors!</p>
+    </section>
+
+   <section>
+        <img src="images/profile-2.jpg" width="200" height="200" alt="customer2">
+        <p>I hired GreenView Landscaping to completely redesign my backyard, and I couldn't be happier with the results. The team was professional, punctual, and full of creative ideas. They transformed a patchy, uneven lawn into a beautiful outdoor living space with a new patio, garden beds, and lighting. Communication was great throughout the process, and they stayed within budget. I've already recommended them to two neighbors!</p>
+    </section>
+</div> <!--end of clip -->
+
+
+
+
+
+
+    </main>
+    
+<div id="footerWrapper">
+        <footer>
+            <p>&copy; <span id="year">x</span> &bull; Jackson Nieporte</p>
+        </footer>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html> 
