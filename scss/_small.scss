@@ -14,13 +14,14 @@ html {
 
 /* --------------------------- BODY --------------------------- */
 body {
-    font-family: $defaultFont;
+    font-family: "Special Gothic", sans-serif;
     font-weight: $lightWeight;
     min-width: 320px;
 }
 
 
 /* --------------------------- HEADER --------------------------- */
+
 #headerWrapper {border-bottom: 1px solid $greyColor;}
 header {
     display: grid;
@@ -37,12 +38,21 @@ header {
 
 
 /* --------------------------- IMAGE STUFF GOES HERE --------------------------- */
-div.parent {
-    display: grid;
+#parent {
+    display: flex;
+    gap: $gutter;
+    padding: 2rem;
+    h2 {
+            border-radius: .5rem;
+            color: whitesmoke;
+            background-color: #333;
+            text-align: center;
+        }
     section {
         position: relative;
-        h2{}
+        
         img {
+            border-radius: .5rem;
             width: 100%;
             height: auto;
             display: block;
@@ -53,7 +63,32 @@ div.parent {
         }
     }
 }
+h3 {
+    padding: 2rem;
+}
 
+
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(90deg,rgba(150, 140, 140, 0.13) 0%, rgba(61, 57, 57, 0.3) 46%, rgba(88, 85, 85, 0.31) 100%);
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Ensure it's above the swiper-wrapper and slides */
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 1rem;
+  h1 {
+    color: white;
+    font-weight: bold;
+  }
+  p {
+    color: whitesmoke;
+    font-weight: bolder;
+  }
+}
 
 
 
@@ -92,14 +127,13 @@ main {
 
 // clip path
 
-div.clip {
+#clip {
     display: grid;
     grid-template-columns: 1fr 1fr;
     section{
         padding: 7px;
-
-        img{
-        width: 100%;
+        img {
+        width: 50%;
         height: auto;
         clip-path: circle(50% at 50% 50%);
         transition: transform 1s;

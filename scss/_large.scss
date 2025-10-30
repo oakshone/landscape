@@ -4,9 +4,16 @@ header, nav, main {
 }
 
 /* NAVIGATION STUFF GOES HERE  */
-div.parent {
+div.clip {
     section{
         grid-template-columns: 200px auto;
         column-gap: 8px;
     } // end section
 } // end parent
+
+
+/* mask */
+div.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

@@ -314,7 +314,7 @@ html {
 
 /* --------------------------- BODY --------------------------- */
 body {
-  font-family: "Spline Sans", sans-serif;
+  font-family: "Special Gothic", sans-serif;
   font-weight: 300;
   min-width: 320px;
 }
@@ -339,20 +339,54 @@ header span {
 }
 
 /* --------------------------- IMAGE STUFF GOES HERE --------------------------- */
-div.parent {
-  display: grid;
+#parent {
+  display: flex;
+  gap: 10px;
+  padding: 2rem;
 }
-div.parent section {
+#parent h2 {
+  border-radius: 0.5rem;
+  color: whitesmoke;
+  background-color: #333;
+  text-align: center;
+}
+#parent section {
   position: relative;
 }
-div.parent section img {
+#parent section img {
+  border-radius: 0.5rem;
   width: 100%;
   height: auto;
   display: block;
 }
-div.parent section img:last-child {
+#parent section img:last-child {
   position: absolute;
   bottom: 0;
+}
+
+h3 {
+  padding: 2rem;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(90deg, rgba(150, 140, 140, 0.13) 0%, rgba(61, 57, 57, 0.3) 46%, rgba(88, 85, 85, 0.31) 100%);
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Ensure it's above the swiper-wrapper and slides */
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+.overlay-text h1 {
+  color: white;
+  font-weight: bold;
+}
+.overlay-text p {
+  color: whitesmoke;
+  font-weight: bolder;
 }
 
 /* --------------------------- MAIN --------------------------- */
@@ -373,20 +407,20 @@ main p {
   height: auto;
 }
 
-div.clip {
+#clip {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-div.clip section {
+#clip section {
   padding: 7px;
 }
-div.clip section img {
-  width: 100%;
+#clip section img {
+  width: 50%;
   height: auto;
   clip-path: circle(50% at 50% 50%);
   transition: transform 1s;
 }
-div.clip section img:hover {
+#clip section img:hover {
   transform: rotate(15deg);
 }
 
@@ -476,6 +510,7 @@ footer {
     padding: 0;
   }
   #theNav li {
+    position: relative;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
   }
   #theNav li a {
@@ -532,9 +567,14 @@ footer {
     margin: auto;
   }
   /* NAVIGATION STUFF GOES HERE  */
-  div.parent section {
+  div.clip section {
     grid-template-columns: 200px auto;
     -moz-column-gap: 8px;
          column-gap: 8px;
+  }
+  /* mask */
+  div.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
